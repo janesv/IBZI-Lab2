@@ -31,6 +31,12 @@ class ViewController: UIViewController {
                     print("Error: NO SPACES should be in this field!")
                     return false
                 }
+                if "a"..."z" ~= i || "A"..."Z" ~= i { // проверка на вводимость только английского алфавита
+                    print("Language is okey")
+                } else {
+                    print("Error: ONLY ENGLISH is allowed in this field!")
+                    return false
+                }
             }
         } else {
             print("Error: Text field is empty!")
